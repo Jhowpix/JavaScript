@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="JavaScript.js">
+
+  <title>Continuando exercicio 01</title>
+</head>
+<body>
+
+  <h1>Js Variaveis</h1>
+  <p>resultado entre a soma de 5, 2 e 3</p>
+  <p id="demo"></p>
+  <script>
+    let a = 5 + 2 + 3;
+    document.getElementById('demo').innerHTML = a;
+  </script>
+
+  <p>podemos fazer isso com strings<br> podemos transformar numeros em strings usando '' ou "" Observacao de colar um numero entre aspas o restante sera tratado com string e serao concatenados.</p>
+
+  <p id="demo1"></p>
+
+  <script>
+    let b = '5' + 2 + 3;
+    document.getElementById('demo1').innerHTML = b;
+  </script>
+
+  <p id="demo2"></p>
+
+  <script>
+    let c = 2 + 3 + '5';
+    document.getElementById('demo2').innerHTML = c;
+  </script>
+
+  <p>$ sao tratados como letras em JS.</p>
+
+  <p id="demo3"></p>
+  <script>
+    let $$$ = 2;
+    $meuDinheiro = 7; 
+    document.getElementById('demo3').innerHTML = $$$ + $meuDinheiro;
+  </script>
+  
+  <p>O _ tambem e tratado com uma letra variaveis com _ tambem podem ser usadas.<br> A let palavra chave para variaveis nao pode ser redeclarada.<br> As variaveis let tem que ser declarada antes do uso.<br> Variaveis definidas como let tem escopo de bloco.<br> Ja a variavel declarada com var pode ser redeclarada tanto dentro de {} quanto fora.<br> No let a variavel declarada fora das {} nao altera o valor da que esta declarada dentro de {}.<br>
+  Com let nao e possivel redeclarar uma variavel no mesmo bloco exemplo:<br> var x = 2; <br> let x = 2; nao ira funcionar<br> redeclarar let em outro bloco e permitido exemplo:<br> let x = 2;<br> {<br> let x = 5; <br> } <br></p>
+  <p>Com var voce usar a variavel antes da sua declaracao veja o exemplo no codigo. </p>
+  
+  <p id="demo4"></p>
+
+  <script>
+    carro = 'fusca';
+    document.getElementById('demo4').innerHTML = carro;
+    var carro;
+  </script>
+
+  <h3>A const nao podem ser redeclaradas.<br> As variaveis const nao podem ser redefinidas.<br> Variaveis const tem escopo de bloco.</h3>
+  <h2>As variaveis const devem receber o valor quando forem declaradas</h2>
+  <p> const PI = 3.14159265359; <B>esta e a forma correta</B><br><br>
+  const PI;<br> PI = 3.14159265359; <b>forma incorreta</b></p>
+
+  <h2>Quando usar JavaScript const?
+    Sempre declare uma variável com const quando souber que o valor não deve ser alterado.<br>
+    
+    Use const quando você declarar:<br>
+    
+    
+        <li>Uma nova matriz</li>
+        <li>um novo objeto</li>
+        <li>Uma nova função</li>
+        <li>Um novo RegExp</li>
+    
+  </h2>
+
+<h1>Matrizes constantes</h1>
+<p>Voce pode alterar um elemento de uma matriz constante.</p>
+
+<p id="demo5"></p>
+
+<script>
+
+  const car = ['gol', 'brasilia', 'chevete', 'fusca'];
+
+  // troca o elemento selecionado lembrando que se comeca a contar de zero//
+  car[0] = 'ford ka';
+
+  //  adiciona um elemento//
+  car.push('fiat uno');
+
+  document.getElementById('demo5').innerHTML = car;
+
+</script>
+ <!--Praticar mais sobre -->
+ <p id="demo6"></p>
+
+ <script>
+
+  const carr = ['gol', 'brasilia', 'chevete', 'fusca'];
+
+  // troca o elemento selecionado lembrando que se comeca a contar de zero//
+  carr[3] = 'ford ka';
+
+  //  adiciona um elemento//
+  carr.push('fiat uno');
+
+  document.getElementById('demo6').innerHTML = carr;
+
+</script>
+
+<p id="demo7"></p>
+
+<script>
+
+  const carros = ['gol', 'brasilia', 'chevete', 'fusca'];
+
+  // troca o elemento selecionado lembrando que se comeca a contar de zero//
+  carros[1] = 'ford ka';
+
+  //  adiciona um elemento//
+  carros.push('bicicleta');
+
+  document.getElementById('demo7').innerHTML = carros;
+
+</script>
+
+  <h1>Nao pode reatribuir valores</h1>
+  <p>Exemplo: <br>const car = [ 'fusca', 'braisilia', 'ford ka'];<br> cars = [ 'toyota', 'volvo', 'audi',]; <b>isso nao funciona gera um erro</b></p>
+
+  <h2>Voce pode mudar as propriedades de um objeto constante.</h2>
+  <p>Ao declarar um objeto constante nao o torna imutavel.</p>
+  <p>veremos no codigo</p>
+
+  <p id="demo8"></p>
+
+  <script>
+
+    const car1 = {type: 'fiat', model:'500', color:'white'};
+      car1.color = 'red';
+        car1.Dono = 'Jhonatan';
+         
+        document.getElementById('demo8').innerHTML = ' o dono do carro e ' + car1.Dono; 
+
+  </script>
+
+  <!--nao da para escrever em outro paragrafo substituindo somente os demo e o valor tipo car1.color, term que criar outra variavel-->
+
+  <p id="demo9"></p>
+  
+   
+  <script>
+
+    const car2 = {type: 'fiat', model:'500', color:'white'};
+      car2.color = 'red';
+        car2.Dono = 'Jhonatan';
+         
+        document.getElementById('demo9').innerHTML = 'a cor do carro e ' + car2.color; 
+
+  </script>
+  
+  <h1>Declarar uma variavel const e similar a let quando se trata de escopo de bloco</h1>
+  <p>veja no codigo.</p>
+
+  <p id="demo10"></p>
+
+  <script>
+    const p = 10;
+
+    {
+      const p = 20;
+    }
+      
+    document.getElementById('demo10').innerHTML = p;
+  </script>
+
+  <h2>veremos operadores JS</h2>
+
+  <p> operador de atribuicao: = atribui o valor a uma variavel ou elemento (  =  )<br> operador de adicao + <br> operador de subtracao - <br> operador de multiplicacao * <br> operador de divisao /  <br> de porsentagem % <br> incremento ++ <br> decremento -- <br> exponencial ** <br> adiciona um valor a uma variavel +=, -=, *=, /=, %=, **=.<br> Operadores + pode ser adicionado para concatenar strings.<br> veremos dentro do codigo</p>
+
+  <p id="demo11"></p>
+
+  <script>
+    let te = 'Jhona';
+    let te1 = 'tan';
+    let te2 = te + te1; 
+    document.getElementById('demo11').innerHTML = te2;
+    </script>
+
+    <h5>quando usamos o operador + com strings e chamado de operador de concatenacao.</h5>
+
+    <p>adicionando strings e numeros</p>
+
+    <p id="demo12"></p>
+
+    <script>
+      let m = 5 + 5;
+      let n = "5" + 5; //se voce adiciona um numero a uma string o resultado sera uma string //
+      let o = "numero" + 5;
+      document.getElementById('demo12').innerHTML = m + '<br>' + n + '<br>' + o;
+    </script>
+
+    <!--observacao muitas das tags html tem funcionalidade dentro do innerHTML-->
+   <h1>Veremos operadores logicos e operadores de comparacao</h1>
+    <p>operadores de comparacao</p>
+    <li>==</li> 
+    <li>===</li>
+    <li>!=</li>
+    <li>!==</li>
+    <li>></li>
+    <li><</li>
+    <li>>=</li>
+    <li><=</li>
+    <li>?</li>
+
+    <p>== igual<br> ===igual o valor igual ao tipo<br> != nao igual <br> !== nao igual ao valor nao igual ao typo<br> > maior que <br> < menor que <br> >= maior que ou igual a <br> <= menor que ou igual<br> ? operador ternario.</p>
+
+    <h2>Operadores de atribuicao</h2>
+    <p id="demo13"></p>
+
+    <script>
+      let q = 10;
+      q -= 5;
+      document.getElementById('demo13').innerHTML = q;
+    </script>
+
+<p id="demo14"></p>
+
+<script>
+  let r = 250;
+  r += 300;
+  document.getElementById('demo14').innerHTML = r;
+</script>
+  
+<p id="demo15"></p>
+
+<script>
+  let s = 50;
+  s *= 3;
+  document.getElementById('demo15').innerHTML = s;
+</script>
+</body>
+</html>
