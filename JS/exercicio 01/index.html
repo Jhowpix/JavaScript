@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="JavaScript.js">
+
+  <title>Inicio de estudos JS</title>
+
+  <!--Observacao importante todo conteudo descrito abaixo sao de estudo particular meu em base na pagina de web w3schools.com , vao possuir trechos identicos aos da pagina assim como vao possuir trechos acrecentados por mim-->
+
+  <!--JavaScript e a linguagem de programacao mais popular do mundo-->
+
+</head>
+
+<body>
+
+  <h1>Introducao ao JavaScript</h1>
+
+  <h2> JavaScript no corpo</h2>
+  <p id="demo5"></p>
+
+  <script>
+    document.getElementById('demo5').innerHTML='Meu primeiro Javascript "Mentira".';
+  </script>
+
+  <P>Em outros exemplos podemos ver JavaScript usando atributos Type: script type="text/javascript"  isso nao e obrigatorio JavaScript e uma linguagem padrao em HTML</P>
+
+    <h2> JavaScrip em head ou body?</h2>
+    <p>Bom pode ser usado em ambos porem para sua pagina ficar mais 'fruida'seria melhor colocar apos o '< / body >'.<br>Porque?<br>Porque os arquivos HTML e CSS assim como outros posto juntamente com os arquivos da sua paginas sao lidos pelo Browser seu navegador primeiro e sao henderizados primeiro por serem melhor imterpletados pelos mesmos.Em uma linguagem mais simples de se falar seria como "se o seu navegador precisasse ainda intender oque aquele codigo quer fazer com os elementos antes de mostralos para o usuario", ficou mais claro assim?</p>
+
+    <p>Os JavaScrip tambem pode ser posto em um arquivo externo.<br>
+    Exemplo: voce vai desenvolver um site certo! ai voce abre uma pasta na sua area de trabalho e da um titulo para ela meu site, apos fazer isso voce abre seu editor de codigo favorito no meu caso o famoso VsCode, voce abre seu VScode vai ate a opcao abrir pasta ou procurar pasta e abre esta pasta que voce acabou de criar em sua area de trabalho (meu site) dentro dela voce cria tres aquivos mais la pelo VScode mesmo um seria Index.html (lembrando que voce pode dar qualquer nome desde que tenha .html no final) vai criar outro arquivo style.css e outro arquivo javascript.js (da mesma forma! voce pode dar quanquer nome a ele desde que tenha .js no final)<br>
+  Desta forma citada a cima voce gerou um arquivo externo para sua pagina.</p>
+
+  <p>Um dos muitos metodos JavaScript HTMML e getElementById().<br>
+    O exemplo abaixo "encontrar" um elemento  HTML (com id="demo") e altera o conteudo do elemento (innerHTML) para "Hello JavaScript":
+  </p>
+
+  <h2>Exemplo</h2>
+
+  <p id="demo">JavaScript pode alterar o conteudo HTML.</p>
+  <button type="button" onclick='document.getElementById("demo").     innerHTML="Hello JavaScript!"'>Click aqui!</button><br>
+
+  <p id="demo1">JavaScript aceita aspas simples e duplas.</p>
+  <button type="button" onclick="document.getElementById('demo1').innerHTML='Hello JavaScript!'">Click aqui!</button><br>
+
+  <p>Neste exemplo JavaScript pode alterar valores de <strong>atributos</strong> HTML.<br>Oque sao atributos HTML?<br> "< element  attribute= "value" > conteúdo do elemento < / element >"</p>
+  <p> < p style  text = color: pink ; > </p>
+
+  <!-- o exemplo abaixop nao deu certo por que e feito com uma iumagem de arquivo GIF, desta forma podendo alternar de ligado para desligado e vice versa -->
+
+  <img id="image" src="img/lamp.jpg" alt="imagem de uma lampada desligada" style="width: 100px;">
+
+    <button onclick="document.getElementById('image').src='img/lamp.jpg'">
+  DESLIGAR</button>
+  
+  <img id="image1" src="img/lamp1.jpeg" alt="imagem de lamapada acesa" style="width: 100px;">
+
+  <button onclick="document.getElementById('image1').src='img/lamp1.jpeg'">LIGAR</button>
+
+  <!-- o exemplo acima nao foi excluido por motivo de pratica da escrita do codigo-->
+
+  <P>Podemos alterar estilos HTML</P>
+
+  <p id="demo2"> Alterar tamanho de elementos. </p>
+  <button type="button" onclick="document.getElementById('demo2').style.fontSize='25px'">Click aqui!</button>
+
+  <P>Podemos tambem ocultar elementos</P>
+
+  <p id="demo3" style="font-size: 30px;"> Ocultar este Paragrafo</p>
+  <button type="button" onclick="document.getElementById('demo3').style.display='none'">OCULTAR</button>
+
+  <p>Tambem podemos mostrar elementos ocultos.</p>
+
+  <img id="tiririca" src="img/titirica.webp" alt="imagem do comediante Tiririca" style="display: none;" width="500px">
+
+  <button type="button" onclick="document.getElementById('tiririca').style.display='block'">Mostrar o elemento oculto!</button>
+
+  <P>JavaScrip e Java sao linguagens de programacao diferentes,
+    JavaScripfoi inventado por Brendan Eich em 1995 e tornou-se um padrao ECMA em 1997. Ta  mais oque e ECMA?
+  </P>
+
+  <p>Paragrafo informativo<br>ECMAScript e JavaScript
+    <strong>ECMAScript é uma linguagem de programação de uso geral</strong>, inspirada no JavaScript e no JScript, e especificada no documento ECMA-262. <strong>ECMAScript não é a mesma coisa que JavaScript</strong>, apesar do uso do <strong>termo "JavaScript" ser amplamente utilizado para referenciar, na verdade, a ECMAScript.</strong>
+    
+    ECMAScript e ECMA-262
+    ECMAScript é uma linguagem de programação, e o documento ECMA-262 é a especificação desta linguagem de programação.</p>
+
+    <h1>Elementos de saidas JS</h1>
+    
+      <ul>
+        <li>innerHTML.</li>
+        <li>document.write().</li>
+        <li>window.alert().</li>
+        <li>console.log().</li>
+      </ul>
+
+      <h2>Usando innerHTML</h2>
+      <p>Para acessar um elemento HTML, o JavaScript pode usar o document.getElementById( aqui vai um id="" do elemento ).<br> O id atributo define o elemento HTML. A innerHTML propriedade define o conteudo HTML</p>
+
+      <p>Exemplo</p>
+      <p id="demo6"> demonstracao </p>
+      <!--o exemplo abaixo vai mostrar no seu navegador o resultado da soma entre 5 e 6 (voce vera 11 em seu navegador)-->
+      <script>
+        document.getElementById('demo6').innerHTML = 5 + 6; 
+      </script>
+
+      <h2>Usando documento.write().</h2>
+      <p>Existe uma observacao a fazer que e nunca chame o documento.write() apos o carregamento do mesmo pois ele ira substituir todo o documento</p>
+      <!--novamente o exemplo mostrar em seu navegador o resultado da soma entre 5 e 6 -->
+      <script>
+        document.write( 5+ 6);
+      </script>
+
+      <p>Outra forma de trabalhar com documento.Write()</p>
+
+      <p>Aperte o botao abaixo para mostrar o resultado da soma entre 5 e 6.<br> Ao apertar no botao toda pagina ira se apagar mostrando assim somente o numero 11 ,isso porque o document.write() exclui todo o html ao ser carregado apos o arquivo .HTML</p>
+
+      <button type="button" onclick="document.write(5+6)">Resultado</button>
+
+      <p>O metodo documento.write() so deve ser usado para testes.</p>
+
+      <h2>Usando Window.alert()</h2>
+      <p>Voce pode usar uma caixa de alerta para exebir dados:<br>Caixa de alerta? Sim uma janela pequena que vai abrir quando seus aquivos ou seu site for aberto ou algum evento for ativo em sua pagina.</p>
+
+      <p>Exemplo<br>este exemplo foi deixado em forma de comentario no codico la no arquivo.html para nao atrapalhar toda vez que abrirmos esta pagina.</p>
+      <!--
+      <script>
+        window.alert(5 + 6);
+      </script>
+       -->
+
+       <p>seria este codigo abaixo.<br>
+         script > 
+          window.alert(5 + 6);
+        / script > <br>A palavra window neste caso e opcional pode ser posta desta forma ou desta forma aqui<br> script > alert(5+6);  / script 
+          .</p>
+
+        <h2>Usando console.log()</h2>
+        <p>Para fins de depuracao voce p[odera chamar o metodo console.log() metodo no navegador para exibir os dados</p>
+        <p>Exemplo</p>
+        <p>Aperte F12 no teclado para ativar a depuracao<br>Em segida, selecione "console" no menu do depurador.<br>Clique em Executar novamente.</p>
+
+        <script>
+          console.log(5+6);
+        </script>
+
+        <p>Neste caso nao sera mostrado nada no navegador, e sim na janela devtools que abre ao apertar F12.</p>
+
+        <p>Este e o codigo descrito la no arquivo html script > 
+          console.log(5+6); / script >.</p>
+
+        <h2>Javascript nao possui metodo de impressao</h2>
+        <p>A unica excecao e chamar o window.print(). metodo do navegador para imprimir a janela atual</p>
+        <p>Exemplo</p>
+
+        <p>Para implimir a janela atual click no botao abaixo</p>
+
+          <button onclick="window.print()">click aqui</button>
+          <!--este metodo nao precisa colocar entre <script></script> ao colocar ele nao funcionou para mim-->
+        
+          <h1>Um programa JavaScript e uma lista de <b>intrucoes</b> a serem executadas por um computador</h1>
+          <p>a seguir la dentro do html vai ser posto um codigo JavaScript para demonstrar a seguencia de intrucoes que o computador execulta e o mesmo codigo pedira para mostrar o resultado no seu navegador ou seja na tela ai em baixo</p>
+
+          <p id="demo7"></p>
+          
+          <script>
+            let x, y, z;
+            x = 5;
+            y = 6;
+            z = x + y;
+
+            document.getElementById('demo7').innerHTML = "o valor de Z e " + z +".";
+          </script>
+
+          <h2>Escrevendo com .innerHTML</h2>
+
+          <p id="demo8"></p>
+          <script>
+            document.getElementById("demo8").innerHTML = "Agora voce sabe por informacoes na tela atravez do innerHTML."
+          </script>
+
+          <p>intrucoes JavaScript sao chamadas de codigo, aprenderemos mais sobre todas elas.</p>
+          <p> O ponto e virgula ( ; ) separam instrucoes JavaScript, vamos ver la no codigo.</p>
+
+          <p id="demo9"></p>
+
+          <script>
+
+            let a, b, c;
+            a = 5;
+            b = 6;
+            c = a + b;
+
+            document.getElementById('demo9').innerHTML = c;
+          </script>
+
+          <p id="demo10"></p>
+
+          <script>
+ 
+            let e, f, g;
+            e = 6;  f = 6; g = e + f;
+            document.getElementById('demo10').innerHTML = g;
+          </script>
+
+          <h2>JavaScript ignora varios espaco em branco</h2>
+          <p>Voce pode adicionar espacos em seu codigo para deixa-lo mais visivel.<br>Para melhor legibilidade de um codigo custuma-se evitar linhas com mais de 80 caracteres, se uma funcao nao colber em uma linha o melhor lugar para fazer a quebra de linha seria apos um operador. Exempro document.getelemetById().innerHTML =<br>
+          "quebrando a linha apos os ( = ) ".</p>
+
+          <h2>Blocos de codigo</h2>
+          <p>As instrucoes podem ser agrupadas em blocos de codigo ,entre chaves {...}. <br> Um lugar onde encontramos blocos de codigo sao nas funcoes JavaScript.</p>
+
+          <p>Exemplo</p>
+          <p>veremos o exemplo dentro do arquivo HTML</p>
+          <h1 id="demo11"></h1>
+          <h1 id="demo12"></h1>
+
+          <button type="button" onclick="myFunction()">Teste aqui</button>
+
+          <script>
+
+            function myFunction(){
+
+              document.getElementById("demo11").innerHTML = "instrucao foi efetuada! .";
+
+              document.getElementById("demo12").innerHTML = "outra instrucao foi efetuas em linha de codigo diferente porem na mesma chave{ }";
+            }
+          </script>
+
+          <h2>Sintaxe JavaScript</h2>
+          <p>  como criar variaveis <br> var x;<br> let y; </p>
+          <p> como usar variaveis <br> x=5; <br> y=6;<br> let z = x + y;</p>
+          <h2>Valores em JavaScript</h2>
+          <p> A sitaxe Js define dois tipos de valores<br> <li>valores fixos</li><li>valores variaveis</li><br>Valores fixos sao chamados de literais<br> Os valores das variaveis sao chamados de variaveis.</p>
+          <h2>Literais JS</h2>
+          <p>As duas regras mais importantes para valores fixos sao:<br> 1. Os numeros sao escritos com ou sem casas decimais:<br> veremos no codigo</p>
+          <p id="demo13"></p>
+          <script>
+            document.getElementById('demo13').innerHTML = 10.50;
+          </script>
+
+          <p>2.Strings sao textos, escritos entre aspas duplas ou simples ( " " ) ou ( ' ' ):<br>veremos no codigo</p>
+
+          <p id="demo14"></p>
+
+          <script>
+            document.getElementById('demo14').innerHTML = "isto e uma string";
+          </script>
+
+          <h3>Variaveis JS</h3>
+            <p>Em uma linguagem de programacao as variaveis sao usadas para armazenar valores de dados.<br> JS usa as palavras <b>( var,  let e const ) </b>para declarar variaveis.<br> Um sinal de ( = ) sao usados para atribuir valores as variaveis<br> Neste exemplo, x e defenido como uma variavel e atribuido o valor 6.<br> let x = 6;</p>
+            <p>Js usa operadores aritmeticos para calcular valores, ( + - * / ). <br> vejamos no exemplo la dentro do codigo.</p>
+
+            <p id="demo15"></p>
+
+            <script>
+            document.getElementById('demo15').innerHTML = ( 5 + 6 ) * 10;
+            </script>
+
+            <h3>Expressoes Js</h3>
+            <p>Uma expressao e uma combinacao de valores, variaveis e operadores, que calcula um valor.<br>Por exemplo. 5*10 resultado 50.</p>
+            <p id="demo16"></p>
+
+            <script>
+              document.getElementById('demo16').innerHTML = 5*10;
+            </script>
+            <p>As expressoes tambem podem conter valores variaveis</p>
+            <p id="demo17"></p>
+
+            <script>
+              var k;
+              k=5;
+              document.getElementById('demo17').innerHTML = k * 10;
+            </script>
+            
+            <p>Os valores podem ser de varios tipos como numeros e strings.<br> Por exemplo: "Jhon"+"atan", resultado Jhonatan:<br> veremos la dentro do codigo</p>
+            <p id="demo18"></p>
+
+            <script>
+              document.getElementById('demo18').innerHTML = "Jhon" + "atan";
+            </script>
+
+            <p>As palavras chaves em JS sao usadas para indentificar acoes que vao ser executadas pelo navegador<br> A palavra <b>let</b> diz ao navegador para criar uma variavel. A palavra <b>var</b> tambem diz ao navegador para criar uma variavel, veremos mais sobre a diferenca entre usar <b>var ou let</b> mais para frente.</p>
+
+            <h3>4 maneiras de declarar variaveis em Js <li>var</li><li>let</li><li>cosnt</li><li>nada</li></h3>
+            <p>Quando usar JavaScript var?
+              Sempre declare variáveis ​​JavaScript com var, letou const.
+              
+              A varpalavra-chave é usada em todo o código JavaScript de 1995 a 2015.
+              
+              As palavras-chave lete constforam adicionadas ao JavaScript em 2015.
+              
+              Se você deseja que seu código seja executado em navegadores mais antigos, você deve usar var.</p>
+
+              <h2>Quando usar JavaScript const?</h2>
+
+              <p>
+                Se você quer uma regra geral: sempre declare variáveis ​​com const.
+                
+                Se você acha que o valor da variável pode mudar, use let.
+                
+                Neste exemplo, preco1, preco2, e total, são variáveis:Onde preco1 e preco2 seram declarados como const e total sera declarado como let <br> Veremos dentro do codigo.</p>
+
+                <p id="demo19"></p>
+
+                 <script>
+
+                  const preco1 = 5;
+                  const preco2 = 6;
+
+                  let total = preco1 + preco2;
+
+                  document.getElementById('demo19').innerHTML = "Este e o total: " + total;
+
+                 </script>
+
+                 <h2>Voce pode declarar muitas variaveis em uma instrucao</h2>
+
+                 <p id="demo20"></p>
+                 <script>
+                  let pessoa = 'Jhonatan';
+                  carro = 'nao possui carro';
+                  preco = 'preco nao vi mais ta caro.'
+                  document.getElementById('demo20').innerHTML = pessoa +" " + carro + ", " + " " + preco;
+                 </script>
+
+                 <h2>Variaveis podem ser declaradas sem valores, e estes valores podem ser acrecentados posteriormente ou por um usuario ou algo que sera calculado dentro do proprio programa.</h2>
+                 <p>Variaveis sem valores sao chamadas de <b>undefined</b></p>
+
+                 <h4>Uma variavel var quando declarada seu valor ela nao perde este valor quando outra variavel var for posta ao codigo.</h4>
+                 <p>Vejamos o exemplo em texto.<br> var nomeCarro = 'fusca';<br> var nomeCarro ;<br> o valor de var vai ser sempre fusca  ela nao vai ficar undefined por que sua ultima declaracao ficou vazia.<br> Veremos melhor no codigo</p>
+
+                 <p id="demo21"></p>
+                 <script>
+                  var nomeCarro = 'Fusca';
+                  var nomeCarro ;
+                  document.getElementById('demo21').innerHTML = nomeCarro;
+                 </script>
+
+        </body>
+        
+
+</html>
