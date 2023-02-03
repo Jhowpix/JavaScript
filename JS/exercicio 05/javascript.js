@@ -208,9 +208,22 @@ let car = "uno"; */ //podemos ver que la sublinhou em vermelho vai dar erro //
   console.log(carro.ano);
   console.log(carro["marca"]);
  // carro.buzina();  // chamada da funcao //
- console.log(carro.completo());
+  console.log(carro.completo());
 
+  //eventos os mais utilizados pesquise mais sobre//
 
-
-
-
+  /* 
+  onclick
+  dblclick
+  onmouseover
+  onmouseout
+  onmousemove
+  onmousedown
+  onmouseup
+  onfocus
+  onchange
+  onblur
+  onkeydown
+  onkeyup
+  onload
+  onresize
