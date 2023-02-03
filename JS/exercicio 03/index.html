@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="JavaScript.js">
+  
+
+  <title>exercicio 03</title>
+
+</head>
+
+<body>
+
+  <h1>JS possui tem apenas um tipo de numero. Os numeros podem ser escritos com ou sem casas decimais.</h1>
+
+  <p id="demo"></p>
+
+  <script>
+    let a = 3.14;
+    let b = 3;
+    document.getElementById('demo').innerHTML = a + '<br>' + b;
+  </script>
+
+  <p>numeros extragrandes ou extrapequenos podem ser escritos com notacao cientifica (expoente):</p>
+
+
+
+  <p id="demo1"></p>
+
+  <script>
+    let c = 123e5;
+    let d = 123e-5;
+    document.getElementById('demo1').innerHTML = c + '<br>' + d;
+  </script>
+
+
+   <p>copiado e colado da pagina W3schools </p>
+  <p id="demo2"></p>
+
+<script>
+let x = 123e5;
+let y = 123e-5;
+document.getElementById("demo2").innerHTML = x + "<br>" + y;
+</script>
+  
+ <!--referente ao texto abaixo irei precisar de mais pesquisas sobre-->
+
+  <h2>Numeros JavaScript sao sempre ponto flutuante de 64 bits</h2>
+    <p>ao contrario de muitas outras linguagens de programacao, o JS nao define diferentes tipos de numeros, como inteiros, curtos , longos, ponto flutuante, etc.<br> Os numeros JS sao sempre armazenados como numeros de ponto flutuante de precisao dupla, seguindo padrao internacional IEEE 754.<br> Este formato armazena numeros em 64 bits, onde o numero (a fracao) e armazenado nos bits 0 a 51, o expoente nos bits 52 a 62 e o sinal no bit 63:</p>
+    <h2>VALOR (TAMBEM CONHECIDO COMO <br> FRACAO/MANTISSA) <br>s52 bits (0-51)</h2>
+    <h2> EXPOENTE<br>11 bits (52 - 62)<br><br> o sinal <br> 1 bit (63)</h2>
+    <!--Para que eu nao me perca ainda nesta parte irei pesquisar e retornar no exercicio 04-->
+</body>
+</html>
