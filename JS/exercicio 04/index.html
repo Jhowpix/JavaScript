@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>exercicio 04</title>
+</head>
+<body>
+
+  <H1>De volta aos numeros apos uma apresentacao ao sistema Binario ( bit = dado ( 0 1 ), 4 bits = 1 nibble, 8 bits = 1 byte , 16 bits = 2 bytes ou 1word, 32 bits = DoubleWord (Dword) ou 4 bytes, 64 bits = QuadWord (Qword) ou 8 bytes )</H1>
+  <h2>1024 bytes = 1 kilobyte<br> multiplicando 1 kilobyte por 1024 temos o Megabyte e se multiplicarmos o Megabyte por 1024 teremos o GigaByte e multiplicando por 1024 os GigaByte teremo o TeraByte</h2>
+  <p>Dai vem o achismo de achar que os pendrives, HDs, SSDs etc... nao vem com a real capacidade de armazenamento dito no  anunciado ou na embalagem, gracas a uma falta de informacao que poderia ser descrita do fabricante para o usuario, e da propria falta de conhecimento sobre o assunto do usuario.</p>
+
+  <h2>Aviso!!<br> JS usa o operado + para concatenacao.<br>Os numeros sao adicionados.<br>Strings sao concatenadas</h2>
+  <p>entenderemos isso la dentro do codigo.</p>
+
+  <p id="demo"></p>
+
+  <script>
+    let a = 10;
+    let b = 20;
+    let c = a+b;
+    document.getElementById('demo').innerHTML = c;
+  </script>
+  <p>acima foi adicionado somente numeros sem aspas '' ou "" <br> a baixo vamos adicionas aspas aos numeros e ver como reagem a soma<br>Lembrando que precisamos trocar as variaveis let para funcionar.</p>
+
+  <p id="demo1"></p>
+
+  <script>
+    let d = '10';
+    let e = '20';
+    let f = d+e;
+    document.getElementById('demo1').innerHTML = f;
+  </script>
+
+  <p>No exemplo acima ele trata os numeros entre aspas como strings<br>Vamos ver com somente um valor dentro de aspas como ele se comporta abaixo.</p>
+
+  <p id="demo2"></p>
+
+  <script>
+    let g = 10;
+    let h = '20';
+    let i = g+h;
+    document.getElementById('demo2').innerHTML = i;
+  </script>
+
+  <p>Neste exemplo ele trata um valor como number e outro como string e o operador + faz a funcao de concatenacao juntando os dois valores.<br> Abaixo veremos os dois valores declarados como numbers porem no pedido de saida .innerHTML sera posto "resultado" + j + k; que sao as variaveis e ver oque sai no resultado.</p>
+
+  <p id="demo3"></p>
+
+<script>
+var j = 10;
+var k = 20;
+document.getElementById("demo3").innerHTML =
+"Resultado " + j + k;
+</script>
+
+<p>Neste caso acima o resultado foi uma concatenacao das duas variaveis por conta da propria string (resultado) e o operador + antes da variavel j, se tirarmos a estring e o operador deixando assim somente j + k; o Js realiza a soma entre as duas variaveis.<br> Vamos ver abaixo como o JS se comporta com a soma entre tres variaveis sendo que somente uma delas sera dada o valor de string</p>
+
+<p id="demo4"></p>
+
+<script>
+let l = 10;
+let m = 20;
+let n = "30";
+let result = l + m + n;
+document.getElementById("demo4").innerHTML = result;
+</script>
+
+<p>vimos que primeiro ele realiza a soma das primeiras variaveis declaras como number e sua ultima variavel declarada com string ele faz a concatenacao.</p>
+
+<h3>JS tentara converter strings em numeros em todas as operacoes numericas.</h3><p>Veremos no exemplo la dentro do codigo</p>
+
+<p id="demo5"></p>
+
+<script>
+let o = "100";
+let p = "10";
+let q = o * p;   
+document.getElementById("demo5").innerHTML = q;
+</script>
+
+<p>neste caso mesmo os numeros dentro de aspas sendo considerado strings o JS realiza a multiplicacao entre eles.</p>
+
+<H2>Assim como acima funciona com divisao, subtracao, porcentagem  menos com adicao pois vimos que temos caso que o sinal + ele concatena (junta) os valores declarados nas variaveis.</H2>
+
+
+<h1>NaN - nao e um numero</h1>
+<p>NaN e uma palavra reservada do JS que indica que um numero nao e um numero valido. (Que????) Vamos la intender isso.<br> Se tentarmos fazer um calculo com uma string onde dentro de aspas nao foram colocado numeros isso resulta em NaN, exemplo let x = 100 / 'aplee'<br> Veja exemplo no codigo.</p>
+
+<p id="demo6"></p>
+
+<script>
+document.getElementById("demo6").innerHTML = 100 / "Apple";
+</script>
+<p>voce pode usar uma funcao do JS global <b>isNaN</b> para descobrir se um valor nao e um numero, ela lhe retornara a informacao de true ou false<br> Veja no codigo.</p>
+
+<p id="demo7"></p>
+
+<script>
+let x = 100 / "Apple";
+document.getElementById("demo7").innerHTML = isNaN(x);
+</script>
+
+<p>se usarmos <b>NaN</b> em uma operacoes matematica o resultado tambem sera NaN</p>
+
+<p id="demo8"></p>
+
+<script>
+let w = NaN;
+let y = 5;
+document.getElementById("demo8").innerHTML = w + y;
+</script>
+
+<p>NaN e um typeof que retorna number.</p>
+
+<p id="demo9"></p>
+
+<script>
+let s = NaN;
+document.getElementById("demo9").innerHTML = typeof s;
+</script>
+
+<h1> Infinity ou -Infinity e o valor que JS retornara se voce calcular um numero fora do maior numero possivel.<br> Veja dentro do codigo.</h1>
+
+<p id="demo10"></p>
+
+<script>
+
+let myNumber = 2; // variavel let de nome myNumber de valor 2
+let txt = "";       // outra variavel let de nome txt sem valor declarado
+
+while (myNumber != Infinity) // declaração while cria um laço que executa uma rotina especifica enquanto a condição de teste for avaliada como verdadeira. 
+// != o codigo vai executar a funcao enquanto nao for igual a Infinity.
+{
+   myNumber = myNumber * myNumber;  // numero vezes ele mesmo.
+  txt = txt + myNumber + "<br>";    // txt vai apresentar o numero mais string e uma quebra de linha.
+}
+
+document.getElementById("demo10").innerHTML = txt;
+</script>
+
+<h2>a divisao por zero 0 tambem gera Infinity</h2>
+<p>Exemplo let x = 2 / 0; que seria Infinity<br> Let y = -2; que seria -Infinity<br> typeof Infinity retorna number</p>
+
+<h2>JS interpleta constante numericas como hexadecimais se forem precendidas por 0x<br> Veja no codigo.</h2>
+
+<p id="demo11"></p>
+
+<script>
+let xx = 0xFF;
+document.getElementById("demo11").innerHTML = "0xFF = " + xx;
+</script>
+<p>nao intendi mais vou entender jaja</p>
+
+<h2>toStrong()</h2>
+<p>metodo para gerar numeros de base 2 a base 36.<br> Hexadecimal e a base 16. decimal base 10. octal base 8. binario base 2. </p>
+
+<p id="demo12"></p>
+
+<script>
+
+let myNumber1 = 32;
+
+document.getElementById("demo12").innerHTML =
+"Decimal 32 = " + "<br><br>" + 
+"Hexatrigesimal (base 36): " + myNumber1.toString(36) + "<br>" +
+"Duotrigesimal (base 32): " + myNumber1.toString(32) + "<br>" +
+"Hexadecimal (base 16): " + myNumber1.toString(16) + "<br>" +
+"Duodecimal (base 12): " + myNumber1.toString(12) + "<br>" +
+"Decimal (base 10): " + myNumber1.toString(10) + "<br>" +
+"Octal (base 8): " + myNumber1.toString(8) + "<br>" +
+"Binary (base 2): " + myNumber1.toString(2);
+</script>
+
+
+<!--PARA NAO FICAR MUITO INFORMACAO A SER DIGERIDA VAMOS A REVISAO E CONTINUAREMOS NO PROXIMO EXERCICIO.-->
+</body>
+</html>
