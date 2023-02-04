@@ -14,8 +14,29 @@
   <p id="text1"><br></p>
   <p id="text3"><br></p>
   <p id="text4"><br></p>
+  
 
   <button onclick="alertHello()">clique aqui</button>
+
+  <button onclick="eventoClick()"> Mudar BackgroundColor</button>
+
+  <button onclick="dblClick()"> dblClick</button><br><br>
+   
+  <p>Passar o moude por cima.</p>
+  <div id="teste" onmouseover="color()" onmouseout="color1()" style="width: 80px; height: 40px; background-color: blue;" ></div>
+
+  <p>Passar o mouse por cima.</p>
+  <div id="teste1" onmousemove="text()" style="width: 80px; height: 40px; background-color: gray; margin-top: 20px;"></div>
+  <p id="text5"></p>
+
+  <p>Clicar sobre o Bloco</p>
+  <div id="teste2" onmousedown="text6()" style="width: 80px; height: 40px; background-color: rgb(178, 53, 209); margin-top: 20px;"></div>
+  <p id="text6"></p>
+
+  <input onfocus="box()" id="textbox" style="width: 160px; height: 40px; background-color: rgb(207, 207, 207);" type="text" placeholder="Digite aqui." value="  Evento onfocus"><br><br>
+
+   <p>Teste com  o console log aparece a menssagem de Mudou dentro do console toda vez e algo muda dentro da caixa abaixo</p>
+  <input onchange="box1()" onfocus="box1()" id="textbox1" style="width: 160px; height: 40px; background-color: rgb(205, 248, 119);" type="text" placeholder="Digite aqui." value="  Evento onchange"><br><br>
 
   <script src="javascript.js"></script>
   

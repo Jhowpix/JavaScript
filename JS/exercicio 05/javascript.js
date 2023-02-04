@@ -213,17 +213,61 @@ let car = "uno"; */ //podemos ver que la sublinhou em vermelho vai dar erro //
   //eventos os mais utilizados pesquise mais sobre//
 
   /* 
-  onclick
-  dblclick
-  onmouseover
-  onmouseout
-  onmousemove
-  onmousedown
-  onmouseup
-  onfocus
-  onchange
-  onblur
-  onkeydown
-  onkeyup
-  onload
-  onresize
+  onclick -quando recebe um click
+  dblclick - click duplo
+  onmouseover - quando o mouse esta sobre  
+  onmouseout - quando o mouse e movido para fora do elemento
+  onmousemove - quaqndo o mouse e movido no elemento
+  onmousedown - quando o click do BOTAO for pressionado
+  onmouseup - quando o cllique do botao e liberado
+  onfocus -  quando o elemento recebe um foco. valido para input,
+  onchange - quando exeste ima mudanca no conteudo. Ao mudar. input
+  onblur - dispara quando perde o foco. input
+  onkeydown - quando a tecla e pressionada
+  onkeyup - 
+  onload - 
+  onresize -
+  */
+
+  function eventoClick(){
+    document.body.style.backgroundColor = "red";
+  }
+
+  function dblClick(){
+    alert("Evento de click duplo");
+  }
+
+
+     // analise da sintaxe abaixo//
+  function color() {  /* dada a funcao com o nome 
+  declarado em onmouseover dentro do html 
+  ex: <div id="teste" onmouseover="color()" */
+    let div =  document.getElementById("teste"); // criado a variavel let //
+    div.style.backgroundColor = "red"; // chamando a div e trocando o stylo da cor dela//
+  }
+
+  function color1() {
+    let div = document.getElementById("teste");
+    div.style.backgroundColor = "blue";
+  }
+
+   //obs: conseguimos colocar mais de uma funcao para um unico elemento dentro do html. //
+
+   function text(){
+    let p = document.getElementById("text5");
+    p.append('k');
+   }
+
+   function text6(){
+    let p = document.getElementById("text6");
+    p.append( " clicou no bloco roxo ");
+   }
+
+    function box(){
+      document.getElementById("textbox").value = "";
+    }
+
+    function box1(){
+      document.getElementById("textbox1").value = "";
+      console.log("mudou");
+    }
