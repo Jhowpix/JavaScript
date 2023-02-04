@@ -271,3 +271,5 @@ let car = "uno"; */ //podemos ver que la sublinhou em vermelho vai dar erro //
       document.getElementById("textbox1").value = "";
       console.log("mudou");
     }
+
+    // para ser mais rapido na aula a pratica continua em escrita manual //
