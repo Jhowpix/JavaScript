@@ -107,7 +107,7 @@ console.log(Array.isArray(pessoa2)); // para mostrar se o valor e realmente uma 
 
         const craques1 = jogadores1.slice(2,5);
         document.getElementById("teste4").innerHTML = craques1.join(" "); 
-        
+        // CONTINUA NO PROXIMO EXERCICIO //
        
 
 
