@@ -64,6 +64,7 @@ else
 
 */
 
+/*
 var hora = new Date().getHours();
 
 if(hora<12){
@@ -76,3 +77,102 @@ else if (hora<18)
 else{
   alert('boa noite');
 }
+*/
+
+// continuacao 8/02/2023
+
+/* switch e usadi paea realizar diferentes acoes com base em diferenter condicoes no mesmo bloco de verificacao. caso a condicao nao seja campativel nao sera executada e o valor padrai sera acionado */
+
+/*
+switch (expressao) {
+  case a:
+    // o que acontece
+    break;
+  case b:
+    // o que acontece  
+    break;
+  case c:
+    // o que acontece
+    break;  
+  default:
+    //o que acontece
+}
+*/
+
+// laco de repeticao
+
+/*
+for (let i=0; i<10001; i++){
+  console.log(i);
+}
+*/
+
+
+/*
+var ano = new Date().getFullYear();
+
+for (let i = ano; i => 1900; i--) {
+  document.getElementById("ano").innerHTML += "<option value=' "+ i + " '>" + i + "</option>"
+}
+
+*/
+
+// setTimeout() 
+
+/*
+
+function ativarContagem(){ //<-- entre ligado com button onclick
+  document.getElementById("teste").innerHTML = "comecou a contar!";
+
+   //ATIVA A FUNCAO APENAS 1 VEZ QUANDO DER O TEMPO DETERMINADO
+   setTimeout(function () {
+    document.body.style.backgroundColor = "red";
+   }, 5000);  // <-- determina o tempo em milissegundos =5segundos 
+
+}
+
+*/ 
+
+// clearTimeout (); usado para parar contagens
+
+/* setInterval();
+ ele executa uma acao no intevalo 
+ de tempo determinado repetidas vezes*/
+
+ //clearInterval(); usado para parar a acao do setInterval();
+
+
+
+ //classes em JavaScript
+
+ // classes sao como fabricas para criar objetos 
+
+ //contructor();
+
+
+ const Carros ={ marca: "fiat", modelo: "uno", ano:2001 }
+
+
+class Carro {
+  constructor(valor1, valor2, valor3){
+  this.marca = valor1;
+  this.modelo = valor2;
+  this.ano = valor3;
+  }
+  buzina(){
+    return this.modelo + " " +"biiiiii";
+
+  }
+}
+
+const uno = new Carro("fiat","uno", 2001);
+const gol = new Carro("volks", "gol", 2000);
+console.log(gol.buzina());
+console.log(uno.buzina());
+
+//obs declare suas classes antes dos objetos//
+
+
+//datas com JavaScript
+
+//pausa para praticar itens vistos acima //
