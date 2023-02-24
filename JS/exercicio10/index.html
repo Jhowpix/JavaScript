@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="index.js"></script>
+  <title>exercicio 10</title>
+</head>
+
+<body>
+
+  <!--Criar um input com seu nome que possua im id-->
+  <input type="text" id="userName" value="Jhonatan">
+  <!--criar um botao que alert este input com seu nome-->
+  <input type="button" value="click me" onclick="doClick()"> 
+  <br><br>
+  
+
+  <!--Crie uma mini calculadora usando uma funcao-->
+  A:<input type="number" id="a" value="">
+  <br><br>
+  B:<input type="number" id="b" value="">
+  <br><br>
+  <input type="button" value="+" onclick="toAdd()">
+   <input type="button" value="-" onclick="sub()">
+    <input type="button" value="x" onclick="mult()">
+     <input type="button" value="/" onclick="divide()">
+   <span id="result"></span>
+   <br><br>
+
+  <input type="text" style="width: 30px;" id="quantity" value="1">
+  <input type="button" value="+" onclick="add()">
+  <input type="button" value="-" onclick="sub()">
+   <br><br>
+
+   Salary:<input type="text" id="salary" value="">
+   <input type="button" value="calculate tax " onclick="toTax()">
+   =<span id="tax"></span>
+   <br><br>
+
+   <input type="radio" name="card" value="1" onclick="doPay(this)"> Visa Card
+   <input type="radio" name="card" value="2" onclick="doPay(this)"> Master Card
+   <input type="radio" name="card" value="3" onclick="doPay(this)"> Paypal
+   <br><br>
+   <span id="Card"></span>
+
+   <br><br>
+   <br><br>
+
+   <table style="width: 400px;" border="1">
+    <tr>
+      <td><input type="checkbox" onclick="checkAll(this)">Selec All</td>
+      <td>Book Name</td>
+    </tr>
+      <tr>
+      <td><input type="checkbox" name="book"></td>
+      <td>Easy Learning Java</td>
+    </tr>  <tr>
+      <td><input type="checkbox" name="book"></td>
+      <td>Easy Lerning Python 3</td>
+    </tr>
+   </table>
+
+</body>
+</html>
