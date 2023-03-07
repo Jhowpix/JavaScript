@@ -7,9 +7,11 @@ let produtos = ['caneta', 'lapis',
 
 let msg = '';
 
-for(let i = 0; 1 < 6; i++){
+
+//poderiamos usar... produtos.lenght  ... ex: for(let i = 0; i < produtos.length ; i ++)
+for(let i = 0; i < 6; i++){
 
   msg +='Produto ' + (i + 1) + ':' + produtos[i]; // erro
 }
 
-document.getElementById('out').innerHTML= msg ;
+document.getElementById('out').innerHTML= msg ; //errp

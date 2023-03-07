@@ -54,4 +54,4 @@ let produto = new Array ('lapis', 'caneta', 'tesoura', 'papel', 'fita');
 
 
 let loja = document.querySelector('#outPut');
-loja.innerHTML= produto
+loja.innerHTML= produto;
