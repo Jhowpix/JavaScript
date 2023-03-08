@@ -1,0 +1,19 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+p{ display: none;}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+#btn{ 
+    padding: 20px 40px; 
+    border-radius: 20px; 
+    cursor: pointer;
+    font-size: 32px;
+    box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.315);
+}
