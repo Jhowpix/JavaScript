@@ -82,7 +82,7 @@ const mult = function ( a, b){
 console.log(mult(4, 5))
 
 olaMundo()
-oiMundo()
+//oiMundo()
 
 function olaMundo(){
     console.log('ola mundo!')
@@ -92,6 +92,62 @@ function olaMundo(){
 // aqui gera um erro 
 // porque as funcoes anonimas so podemos acessadas somente depois
 // de serem declaradas
+
 const oiMundo = function(){
     console.log('oi mundo!')
 }
+oiMundo() // chama a funcao para nao ficar com erro no console
+
+//High-Order Function
+
+function calcular(a, b, operacao){
+  const soma = a + b;
+  const resultado = operacao(a, b)
+
+  return  soma, resultado;
+  
+}
+
+// console.log(calcular(3, 6))
+
+function somar(x, y){
+  console.log('realizando soma')
+  return x + y
+}
+
+console.log(calcular(3, 5, somar))
+
+console.log(calcular(9, 5, function (s, f){
+  console.log('realizando uma subtracao.');
+  return s - f
+}))
+
+// Essas funções que são passadas como parâmetros geralmente são chamadas de callbacks
+// Um exemplo comum de high-order function no javascript é a função .forEach() dos arrays
+function exibirElemento(elemento, indice, array) {
+  console.log({
+    elemento,
+    indice,
+    array
+  })
+}
+
+const lista = ["Maçã", "Banana", "Laranja", "Limão", "Uva"]
+// Forma tradicional
+for (let i = 0; i < lista.length; i++) {
+  exibirElemento(lista[i], i, lista)
+}
+
+console.log('------------------------------------------------')
+// Forma funcional
+lista.forEach(exibirElemento)
+
+console.log('------------------------------------------------')
+// Também poderia ser feito:
+lista.forEach(function (elemento, indice, array) {
+  console.log({
+    elemento,
+    indice,
+    array
+  })
+})
