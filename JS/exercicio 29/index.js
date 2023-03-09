@@ -52,7 +52,6 @@ const filme = {
 }
 
 exibirPro(filme);
-
 function exibirPro(obj){
    let sobreFilme = 'Titulo: ' + filme.titulo + 
                     '\nAno: ' + filme.ano +
@@ -68,7 +67,6 @@ console.log('--------------------------------------')
 // or
 
 exibirPro1(filme);
-
 function exibirPro1(obj){
     for(prop in obj)
          if(typeof prop === 'string')
