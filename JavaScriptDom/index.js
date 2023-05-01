@@ -35,4 +35,11 @@ let divClass = document.querySelector('.divTest');
 console.log(divClass);
 
 let h3TestDom = document.querySelector('.testH3 > i > u');
+h3TestDom.style.color = "red";
+// h3TestDom.style.backgroundColor = "red";
 console.log(h3TestDom);
+
+let textH1 = document.querySelector('h1');
+console.log(textH1.outerHTML);
+textH1.innerHTML = "Novo <u>texto</u>"
+
